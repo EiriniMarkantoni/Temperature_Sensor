@@ -2,8 +2,8 @@
 #include <iomanip>
 
 /*
-    Constructor χωρίς ορίσματα
-    Αρχικοποιεί τον αισθητήρα με τιμές 0
+    Constructor Ο‡Ο‰ΟΞ―Ο‚ ΞΏΟΞ―ΟƒΞΌΞ±Ο„Ξ±
+    Ξ‘ΟΟ‡ΞΉΞΊΞΏΟ€ΞΏΞΉΞµΞ― Ο„ΞΏΞ½ Ξ±ΞΉΟƒΞΈΞ·Ο„Ξ®ΟΞ± ΞΌΞµ Ο„ΞΉΞΌΞ­Ο‚ 0
 */
 TSensor::TSensor() {
     sid = 0;
@@ -14,14 +14,14 @@ TSensor::TSensor() {
 }
 
 /*
-    Constructor με ορίσματα
+    Constructor ΞΌΞµ ΞΏΟΞ―ΟƒΞΌΞ±Ο„Ξ±
 */
 TSensor::TSensor(int id, float m1, float m2, float m3, float m4, float m5) {
     setData(id, m1, m2, m3, m4, m5);
 }
 
 /*
-    Ανάθεση τιμών στον αισθητήρα
+    Ξ‘Ξ½Ξ¬ΞΈΞµΟƒΞ· Ο„ΞΉΞΌΟΞ½ ΟƒΟ„ΞΏΞ½ Ξ±ΞΉΟƒΞΈΞ·Ο„Ξ®ΟΞ±
 */
 void TSensor::setData(int id, float m1, float m2, float m3, float m4, float m5) {
     sid = id;
@@ -34,14 +34,14 @@ void TSensor::setData(int id, float m1, float m2, float m3, float m4, float m5) 
 }
 
 /*
-    Διαβάζει δεδομένα από το πληκτρολόγιο
+    Ξ”ΞΉΞ±Ξ²Ξ¬Ξ¶ΞµΞΉ Ξ΄ΞµΞ΄ΞΏΞΌΞ­Ξ½Ξ± Ξ±Ο€Ο Ο„ΞΏ Ο€Ξ»Ξ·ΞΊΟ„ΟΞΏΞ»ΟΞ³ΞΉΞΏ
 */
 void TSensor::readData() {
     cin >> *this;
 }
 
 /*
-    Υπολογισμός μέσου όρου θερμοκρασίας
+    Ξ¥Ο€ΞΏΞ»ΞΏΞ³ΞΉΟƒΞΌΟΟ‚ ΞΌΞ­ΟƒΞΏΟ… ΟΟΞΏΟ… ΞΈΞµΟΞΌΞΏΞΊΟΞ±ΟƒΞ―Ξ±Ο‚
 */
 float TSensor::avgTemp() const {
     float sum = 0;
@@ -54,7 +54,7 @@ float TSensor::avgTemp() const {
 }
 
 /*
-    Εύρεση μέγιστης θερμοκρασίας
+    Ξ•ΟΟΞµΟƒΞ· ΞΌΞ­Ξ³ΞΉΟƒΟ„Ξ·Ο‚ ΞΈΞµΟΞΌΞΏΞΊΟΞ±ΟƒΞ―Ξ±Ο‚
 */
 float TSensor::maxTemp() const {
     float max = measurements[0];
@@ -69,7 +69,7 @@ float TSensor::maxTemp() const {
 }
 
 /*
-    Εύρεση ελάχιστης θερμοκρασίας
+    Ξ•ΟΟΞµΟƒΞ· ΞµΞ»Ξ¬Ο‡ΞΉΟƒΟ„Ξ·Ο‚ ΞΈΞµΟΞΌΞΏΞΊΟΞ±ΟƒΞ―Ξ±Ο‚
 */
 float TSensor::minTemp() const {
     float min = measurements[0];
@@ -84,21 +84,21 @@ float TSensor::minTemp() const {
 }
 
 /*
-    Εκτύπωση δεδομένων αισθητήρα
+    Ξ•ΞΊΟ„ΟΟ€Ο‰ΟƒΞ· Ξ΄ΞµΞ΄ΞΏΞΌΞ­Ξ½Ο‰Ξ½ Ξ±ΞΉΟƒΞΈΞ·Ο„Ξ®ΟΞ±
 */
 void TSensor::printData() const {
     cout << *this;
 }
 
 /*
-    Member σύγκριση μέσου όρου
+    Member ΟƒΟΞ³ΞΊΟΞΉΟƒΞ· ΞΌΞ­ΟƒΞΏΟ… ΟΟΞΏΟ…
 */
 bool TSensor::hasGreaterAverageThan(const TSensor& sensor) const {
     return avgTemp() > sensor.avgTemp();
 }
 
 /*
-    Έλεγχος αν δύο αισθητήρες έχουν ίδιες μετρήσεις
+    ΞΞ»ΞµΞ³Ο‡ΞΏΟ‚ Ξ±Ξ½ Ξ΄ΟΞΏ Ξ±ΞΉΟƒΞΈΞ·Ο„Ξ®ΟΞµΟ‚ Ξ­Ο‡ΞΏΟ…Ξ½ Ξ―Ξ΄ΞΉΞµΟ‚ ΞΌΞµΟ„ΟΞ®ΟƒΞµΞΉΟ‚
 */
 bool TSensor::hasSameMeasurements(const TSensor& sensor) const {
     for (int i = 0; i < 5; i++) {
@@ -110,21 +110,21 @@ bool TSensor::hasSameMeasurements(const TSensor& sensor) const {
 }
 
 /*
-    Friend συνάρτηση σύγκρισης
+    Friend ΟƒΟ…Ξ½Ξ¬ΟΟ„Ξ·ΟƒΞ· ΟƒΟΞ³ΞΊΟΞΉΟƒΞ·Ο‚
 */
 bool friendGreaterAverage(const TSensor& s1, const TSensor& s2) {
     return s1.avgTemp() > s2.avgTemp();
 }
 
 /*
-    Global συνάρτηση σύγκρισης
+    Global ΟƒΟ…Ξ½Ξ¬ΟΟ„Ξ·ΟƒΞ· ΟƒΟΞ³ΞΊΟΞΉΟƒΞ·Ο‚
 */
 bool globalGreaterAverage(const TSensor& s1, const TSensor& s2) {
     return s1.avgTemp() > s2.avgTemp();
 }
 
 /*
-    Υπερφόρτωση >> (είσοδος)
+    Ξ¥Ο€ΞµΟΟ†ΟΟΟ„Ο‰ΟƒΞ· >> (ΞµΞ―ΟƒΞΏΞ΄ΞΏΟ‚)
 */
 istream& operator>>(istream& in, TSensor& sensor) {
     cout << "Enter sensor ID: ";
@@ -141,7 +141,7 @@ istream& operator>>(istream& in, TSensor& sensor) {
 }
 
 /*
-    Υπερφόρτωση << (εκτύπωση)
+    Ξ¥Ο€ΞµΟΟ†ΟΟΟ„Ο‰ΟƒΞ· << (ΞµΞΊΟ„ΟΟ€Ο‰ΟƒΞ·)
 */
 ostream& operator<<(ostream& out, const TSensor& sensor) {
     out << fixed << setprecision(2);
@@ -161,7 +161,7 @@ ostream& operator<<(ostream& out, const TSensor& sensor) {
 }
 
 /*
-    Υπερφόρτωση τελεστή >
+    Ξ¥Ο€ΞµΟΟ†ΟΟΟ„Ο‰ΟƒΞ· Ο„ΞµΞ»ΞµΟƒΟ„Ξ® >
 */
 bool operator>(const TSensor& s1, const TSensor& s2) {
     return s1.avgTemp() > s2.avgTemp();
